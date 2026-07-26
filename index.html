@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Thakur Payal - BCA student and aspiring front-end developer creating responsive, user-focused web experiences."
+  />
+  <meta name="theme-color" content="#03050d" />
+  <title>Thakur Payal | Front-End Developer Portfolio</title>
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <noscript>
+    <div class="noscript-message">
+      Please enable JavaScript to experience the space-travel animation.
+    </div>
+  </noscript>
+
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="space-nebula" aria-hidden="true"></div>
+  <div class="space-noise" aria-hidden="true"></div>
+  <div class="space-vignette" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="warp-flash" id="warpFlash" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" data-jump="0" aria-label="Go to home section">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">TP</span>
+    </a>
+
+    <nav class="orbit-nav" aria-label="Portfolio navigation">
+      <div class="nav-window">
+        <div class="nav-track" id="navTrack">
+          <a class="nav-link is-active" href="#home" data-index="0">Home</a>
+          <a class="nav-link" href="#about" data-index="1">About</a>
+          <a class="nav-link" href="#skills" data-index="2">Skills</a>
+          <a class="nav-link" href="#services" data-index="3">Focus</a>
+          <a class="nav-link" href="#projects" data-index="4">Projects</a>
+          <a class="nav-link" href="#journey" data-index="5">Journey</a>
+          <a class="nav-link" href="#certificates" data-index="6">Certificates</a>
+          <a class="nav-link" href="#contact" data-index="7">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="journey-status" aria-label="Journey progress">
+      <span id="sectionCounter">01 / 08</span>
+    </div>
+  </header>
+
+  <main class="fixed-stage" id="fixedStage">
+    <section class="panel is-active" id="home" data-index="0" aria-labelledby="home-title">
+      <div class="panel-inner hero-layout">
+        <div class="hero-copy mouse-reactive">
+          <div class="availability-chip">
+            <span aria-hidden="true"></span>
+            Open to internships &amp; junior opportunities
+          </div>
+
+          <p class="eyebrow">Front-end developer in orbit</p>
+          <h1 id="home-title" class="shining-text">
+            Thakur<br />
+            <span>Payal</span>
+          </h1>
+
+          <p class="hero-role">BCA Student <span>/</span> Aspiring Web Developer</p>
+          <p class="hero-description">
+            I build responsive, clear, and user-friendly digital experiences using
+            HTML, CSS, JavaScript, Python, and a practical problem-solving mindset.
+          </p>
+
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-jump="4">
+              Explore my projects
+              <span aria-hidden="true">↗</span>
+            </button>
+            <a class="secondary-button" href="assets/Thakur-Payal-Resume.pdf" download>
+              Download resume
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="developer-terminal mouse-reactive" aria-label="Developer profile summary">
+          <div class="terminal-topbar">
+            <div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span>developer.js</span>
+          </div>
+          <pre><code><span class="code-keyword">const</span> developer = {
+  name: <span class="code-string">"Thakur Payal"</span>,
+  role: <span class="code-string">"Web Developer"</span>,
+  stack: [
+    <span class="code-string">"HTML"</span>, <span class="code-string">"CSS"</span>, <span class="code-string">"JavaScript"</span>
+  ],
+  values: [
+    <span class="code-string">"clean code"</span>,
+    <span class="code-string">"usable design"</span>,
+    <span class="code-string">"continuous learning"</span>
+  ],
+  status: <span class="code-string">"building the next idea"</span>
+};</code></pre>
+          <div class="terminal-status">
+            <span class="terminal-pulse" aria-hidden="true"></span>
+            System online
+          </div>
+        </aside>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>Scroll to travel</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="about" data-index="1" aria-labelledby="about-title">
+      <div class="panel-inner split-layout">
+        <div class="section-heading mouse-reactive">
+          <p class="eyebrow">Mission 02 · Profile</p>
+          <h2 id="about-title" class="shining-text">About me</h2>
+          <p>
+            A detail-oriented Computer Applications student focused on writing
+            maintainable code and creating software that feels simple to use.
+          </p>
+        </div>
+
+        <div class="about-stack mouse-reactive">
+          <article class="glass-card story-card">
+            <p>
+              I enjoy transforming ideas into working applications. My academic and
+              personal projects have helped me practise problem solving, object-oriented
+              programming, CRUD operations, data handling, interface design, and the
+              structure behind reliable software.
+            </p>
+            <p>
+              As I grow as a web developer, I am strengthening my skills in responsive
+              layouts, semantic HTML, modern CSS, JavaScript interactions, form handling,
+              and accessible user experiences.
+            </p>
+          </article>
+
+          <div class="quick-facts">
+            <div class="fact-card"><span>Location</span><strong>Doiwala, Dehradun</strong></div>
+            <div class="fact-card"><span>Education</span><strong>BCA · 2024-2027</strong></div>
+            <div class="fact-card"><span>Languages</span><strong>English · Hindi · Punjabi</strong></div>
+            <div class="fact-card"><span>Approach</span><strong>Clean · Practical · User-focused</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="skills" data-index="2" aria-labelledby="skills-title">
+      <div class="panel-inner skills-layout">
+        <div class="section-heading centered mouse-reactive">
+          <p class="eyebrow">Mission 03 · Toolkit</p>
+          <h2 id="skills-title" class="shining-text">Technology constellation</h2>
+          <p>A growing toolkit for building interfaces, applications, and structured solutions.</p>
+        </div>
+
+        <div class="skill-galaxy mouse-reactive">
+          <div class="orbit-ring ring-one" aria-hidden="true"></div>
+          <div class="orbit-ring ring-two" aria-hidden="true"></div>
+          <div class="orbit-ring ring-three" aria-hidden="true"></div>
+
+          <div class="skill-node node-html"><span>HTML</span><small>Structure</small></div>
+          <div class="skill-node node-css"><span>CSS</span><small>Responsive UI</small></div>
+          <div class="skill-node node-js"><span>JavaScript</span><small>Interaction</small></div>
+          <div class="skill-node node-python"><span>Python</span><small>Logic</small></div>
+          <div class="skill-node node-cpp"><span>C++</span><small>OOP</small></div>
+          <div class="skill-node node-c"><span>C</span><small>Foundations</small></div>
+          <div class="skill-node node-db"><span>Database</span><small>Data handling</small></div>
+          <div class="skill-node node-office"><span>MS Office</span><small>Productivity</small></div>
+
+          <div class="orbit-core">
+            <span>DESIGN</span>
+            <strong>BUILD</strong>
+            <span>IMPROVE</span>
+          </div>
+        </div>
+
+        <div class="skill-caption">
+          <span>Communication</span><span>Teamwork</span><span>Time management</span><span>Attention to detail</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="services" data-index="3" aria-labelledby="services-title">
+      <div class="panel-inner focus-layout">
+        <div class="section-heading mouse-reactive">
+          <p class="eyebrow">Mission 04 · Web focus</p>
+          <h2 id="services-title" class="shining-text">What I build</h2>
+          <p>
+            Practical front-end work with clean visual hierarchy, responsive behaviour,
+            and purposeful interaction.
+          </p>
+        </div>
+
+        <div class="focus-grid">
+          <article class="focus-card mouse-reactive">
+            <div class="focus-icon" aria-hidden="true">01</div>
+            <h3>Responsive websites</h3>
+            <p>Layouts that adapt smoothly across desktop, tablet, and mobile screens.</p>
+            <span>HTML · CSS · Media Queries</span>
+          </article>
+
+          <article class="focus-card mouse-reactive">
+            <div class="focus-icon" aria-hidden="true">02</div>
+            <h3>Interactive interfaces</h3>
+            <p>Menus, forms, filters, animations, and DOM-based interactions with JavaScript.</p>
+            <span>JavaScript · DOM · Events</span>
+          </article>
+
+          <article class="focus-card mouse-reactive">
+            <div class="focus-icon" aria-hidden="true">03</div>
+            <h3>UI implementation</h3>
+            <p>Turning a visual idea into structured, readable, and maintainable front-end code.</p>
+            <span>Components · Layout · UX</span>
+          </article>
+
+          <article class="focus-card mouse-reactive">
+            <div class="focus-icon" aria-hidden="true">04</div>
+            <h3>Data-based applications</h3>
+            <p>Simple management systems with CRUD logic, records, billing, and structured data.</p>
+            <span>Programming · Database · Logic</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="projects" data-index="4" aria-labelledby="projects-title">
+      <div class="panel-inner projects-layout">
+        <div class="section-heading mouse-reactive">
+          <p class="eyebrow">Mission 05 · Selected work</p>
+          <h2 id="projects-title" class="shining-text">Projects</h2>
+          <p>Applications created to solve everyday management and processing problems.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured-project mouse-reactive">
+            <div class="project-topline">
+              <span class="project-number">01</span>
+              <span class="project-status">Personal real-world project</span>
+            </div>
+            <p class="project-type">Inventory &amp; billing application</p>
+            <h3>Store Application</h3>
+            <p class="project-summary">
+              A structured store-management application for handling products, stock,
+              prices, customer billing, and sales records.
+            </p>
+            <ul class="project-points">
+              <li>Product entry and inventory updates</li>
+              <li>Price calculation and customer billing</li>
+              <li>Sales records and CRUD-based data handling</li>
+            </ul>
+            <div class="project-tags"><span>Programming Logic</span><span>CRUD</span><span>Data Handling</span></div>
+          </article>
+
+          <article class="project-card mouse-reactive">
+            <div class="project-topline">
+              <span class="project-number">02</span>
+              <span class="project-status">Academic project</span>
+            </div>
+            <p class="project-type">Order processing system</p>
+            <h3>Restaurant Order Management</h3>
+            <p class="project-summary">
+              An application that supports menu management, order placement, bill
+              calculation, and order-status tracking.
+            </p>
+            <ul class="project-points">
+              <li>Add and manage menu items</li>
+              <li>Place orders and calculate bills</li>
+              <li>Track status and reduce manual processing</li>
+            </ul>
+            <div class="project-tags"><span>OOP</span><span>Billing Logic</span><span>Workflow Design</span></div>
+          </article>
+
+          <article class="project-card learning-card mouse-reactive">
+            <div class="project-topline">
+              <span class="project-number">NEXT</span>
+              <span class="project-status">Learning roadmap</span>
+            </div>
+            <p class="project-type">Web development expansion</p>
+            <h3>Next Orbit</h3>
+            <p class="project-summary">
+              Expanding from core front-end development toward version control,
+              APIs, reusable components, and modern JavaScript workflows.
+            </p>
+            <div class="roadmap-list">
+              <span>Git &amp; GitHub</span><span>REST APIs</span><span>React</span><span>Deployment</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="journey" data-index="5" aria-labelledby="journey-title">
+      <div class="panel-inner journey-layout">
+        <div class="section-heading mouse-reactive">
+          <p class="eyebrow">Mission 06 · Timeline</p>
+          <h2 id="journey-title" class="shining-text">My journey</h2>
+          <p>A timeline of learning, building, and developing practical experience.</p>
+        </div>
+
+        <div class="timeline mouse-reactive">
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-date">2024 - 2027</div>
+            <div class="timeline-content">
+              <span>Education</span>
+              <h3>Bachelor of Computer Applications</h3>
+              <p>Graphic Era Hill University, Dehradun · Estimated completion June 2027</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-date">Project work</div>
+            <div class="timeline-content">
+              <span>Practical development</span>
+              <h3>Store Application</h3>
+              <p>Built inventory, product, billing, and sales-record workflows.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-date">Academic work</div>
+            <div class="timeline-content">
+              <span>Software development</span>
+              <h3>Restaurant Order Management System</h3>
+              <p>Created menu, order, billing, and status-management features.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-date">2021 - 2024</div>
+            <div class="timeline-content">
+              <span>School education</span>
+              <h3>Class X &amp; XII · CBSE</h3>
+              <p>Canterbury Bells School, Doiwala</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="certificates" data-index="6" aria-labelledby="certificates-title">
+      <div class="panel-inner certificates-layout">
+        <div class="section-heading centered mouse-reactive">
+          <p class="eyebrow">Mission 07 · Achievements</p>
+          <h2 id="certificates-title" class="shining-text">Beyond code</h2>
+          <p>Learning and community experiences that strengthen communication, discipline, and perspective.</p>
+        </div>
+
+        <div class="certificate-grid">
+          <article class="certificate-card mouse-reactive">
+            <span class="certificate-year">2026</span>
+            <div class="certificate-index">01</div>
+            <h3>Transmedia Storytelling</h3>
+            <p>UNSW Sydney</p>
+          </article>
+          <article class="certificate-card mouse-reactive">
+            <span class="certificate-year">2025</span>
+            <div class="certificate-index">02</div>
+            <h3>NSS 'B' Certificate</h3>
+            <p>National Service Scheme</p>
+          </article>
+          <article class="certificate-card mouse-reactive">
+            <span class="certificate-year">2025</span>
+            <div class="certificate-index">03</div>
+            <h3>Voluntary Blood Donation Camp</h3>
+            <p>Certificate of Participation</p>
+          </article>
+          <article class="certificate-card mouse-reactive">
+            <span class="certificate-year">2025</span>
+            <div class="certificate-index">04</div>
+            <h3>Scientific Writing in Health Research</h3>
+            <p>ICMR - National Institute of Epidemiology</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="contact" data-index="7" aria-labelledby="contact-title">
+      <div class="panel-inner contact-layout">
+        <div class="contact-copy mouse-reactive">
+          <p class="eyebrow">Final destination · Contact</p>
+          <h2 id="contact-title" class="shining-text">Let's build<br />something useful.</h2>
+          <p>
+            I am interested in internships, entry-level opportunities, collaborative
+            projects, and conversations about web development.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:tp4997181@gmail.com">
+              <span>Email</span><strong>tp4997181@gmail.com</strong><b aria-hidden="true">↗</b>
+            </a>
+            <a href="tel:+919389668985">
+              <span>Phone</span><strong>+91 9389668985</strong><b aria-hidden="true">↗</b>
+            </a>
+            <a href="https://www.linkedin.com/in/thakur-khusboo/" target="_blank" rel="noreferrer">
+              <span>LinkedIn</span><strong>thakur-khusboo</strong><b aria-hidden="true">↗</b>
+            </a>
+          </div>
+        </div>
+
+        <form
+          class="contact-form mouse-reactive"
+          id="contactForm"
+          action="./save-response.php"
+          method="post"
+          accept-charset="UTF-8"
+        >
+          <div class="form-heading">
+            <span>Send a message</span>
+            <small>Your message will be stored securely in my online database.</small>
+          </div>
+
+          <label>
+            Your name
+            <input
+              type="text"
+              id="senderName"
+              name="name"
+              autocomplete="name"
+              placeholder="Enter your name"
+              minlength="2"
+              maxlength="80"
+              required
+            />
+          </label>
+
+          <label>
+            Your email
+            <input
+              type="email"
+              id="senderEmail"
+              name="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              maxlength="254"
+              required
+            />
+          </label>
+
+          <label>
+            Subject
+            <input
+              type="text"
+              id="senderSubject"
+              name="subject"
+              placeholder="Internship, project, or opportunity"
+              maxlength="120"
+            />
+          </label>
+
+          <label>
+            Message
+            <textarea
+              id="senderMessage"
+              name="message"
+              rows="4"
+              placeholder="Tell me about the opportunity or project..."
+              minlength="10"
+              maxlength="2000"
+              required
+            ></textarea>
+          </label>
+
+          <input type="hidden" name="form_version" value="portfolio-v2" />
+
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="companyWebsite">Leave this field empty</label>
+            <input
+              type="text"
+              id="companyWebsite"
+              name="website"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+
+          <button class="primary-button form-button" type="submit">
+            Send message <span aria-hidden="true">↗</span>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <div class="section-progress" aria-hidden="true"><span id="progressFill"></span></div>
+    <div class="section-name" id="sectionName" aria-hidden="true">HOME</div>
+  </main>
+
+  <div class="scroll-space" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
