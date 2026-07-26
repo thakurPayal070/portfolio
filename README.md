@@ -1,4 +1,4 @@
-# 🚀 Thakur Payal — Space Portfolio
+# 🚀 Thakur Payal —  Portfolio
 
 An interactive front-end developer portfolio designed as a journey through space. Scrolling controls the travel experience instead of moving a normal webpage, stars accelerate into warp speed, and technologies orbit the central **BUILD** planet.
 
@@ -52,17 +52,14 @@ An academic application for menu management, order placement, bill calculation, 
 ## Project structure
 
 ```text
-thakur-payal-space-portfolio-online/
+portfolio/
 ├── index.html
 ├── style.css
 ├── script.js
 ├── save-response.php
-├── config.php             # Private hosting credentials; ignored by Git
-├── config.example.php     # Safe public configuration template
+├── config.example.php 
 ├── database.sql
-├── .htaccess
 ├── .gitignore
-├── DEPLOYMENT.md
 ├── README.md
 └── assets/
     ├── Thakur-Payal-Resume.pdf
