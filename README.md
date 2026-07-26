@@ -151,7 +151,7 @@ git push -u origin main
 **Thakur Payal**
 
 - Email: [tp4997181@gmail.com](mailto:tp4997181@gmail.com)
-- LinkedIn: [thakur-khusboo](https://www.linkedin.com/in/thakurpayal/)
+- LinkedIn: [thakurpayal](https://www.linkedin.com/in/thakurpayal/)
 - GitHub: [@thakurPayal070](https://github.com/thakurPayal070)
 - Location: Doiwala, Dehradun, Uttarakhand, India
 
