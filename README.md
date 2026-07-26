@@ -1,163 +1,392 @@
-# 🚀 Thakur Payal —  Portfolio
+#  Thakur Payal — Portfolio
 
-An interactive front-end developer portfolio designed as a journey through space. Scrolling controls the travel experience instead of moving a normal webpage, stars accelerate into warp speed, and technologies orbit the central **BUILD** planet.
+A modern, interactive developer portfolio built with **HTML, CSS, JavaScript, PHP, and MySQL**.
 
-The online version includes a PHP and MySQL contact system, so visitor messages are stored securely in a database rather than only on the local computer.
+The website presents portfolio content as a journey through space. Visitors move between fixed full-screen sections while stars accelerate, text reacts to mouse movement, and technical skills orbit like planets.
 
-## Live experience
+##  Live Demo
 
-The portfolio contains:
+[View the live portfolio](https://thakurpayal.site.je/)
 
-- Fixed full-screen space environment
+##  About Me
+
+I am **Thakur Payal**, a Bachelor of Computer Applications student and aspiring web developer.
+
+I enjoy creating responsive websites, interactive user interfaces, and practical software applications. My current skills include HTML, CSS, JavaScript, C, C++, Python, PHP, MySQL, and database management.
+
+##  Features
+
+- Full-screen space-themed interface
 - Scroll-controlled section transitions
-- Animated canvas starfield and warp effects
-- Technology cards moving in elliptical orbits
-- Gentle floating and depth animations
-- Mouse-reactive headings and interface elements
+- Animated warp-speed starfield
+- Fixed visual stage instead of normal page scrolling
+- Mouse-responsive text and content
 - Centered active navigation
-- Responsive desktop, tablet, and mobile layouts
-- Keyboard navigation and reduced-motion support
+- Orbiting technology elements
+- Gentle floating animations
+- Responsive desktop, tablet, and mobile design
+- Projects, education, certificates, and contact sections
 - Downloadable resume
-- PHP contact form with online MySQL storage
+- PHP contact form
+- MySQL message storage
+- Server-side validation
+- Basic spam and rate-limit protection
+- Keyboard navigation
+- Reduced-motion accessibility support
 
-## Portfolio sections
+##  Portfolio Sections
 
-| Section | Content |
+| Section | Description |
 |---|---|
-| Home | Introduction and primary actions |
-| About | Profile, education, location, and languages |
-| Skills | Animated technology constellation |
-| Focus | Web-development interests and strengths |
-| Projects | Store and restaurant-management applications |
-| Journey | Education and development timeline |
-| Certificates | Certifications and achievements |
-| Contact | Contact details and online message form |
+| **Home** | Introduction and primary actions |
+| **About** | Personal background and development interests |
+| **Skills** | Technologies displayed as an animated constellation |
+| **Focus** | Current development interests and learning goals |
+| **Projects** | Selected software and web projects |
+| **Journey** | Education and development progress |
+| **Certificates** | Certifications and achievements |
+| **Contact** | Contact details and working message form |
 
-## Technologies
+##  Technologies
 
-**Front end:** HTML5, CSS3, JavaScript, Canvas API, responsive design, CSS animation  
-**Back end:** PHP 8+, PDO, MySQL  
-**Tools:** Visual Studio Code, Git, GitHub, XAMPP, phpMyAdmin
+### Front End
 
-## Featured projects
+- HTML5
+- CSS3
+- JavaScript
+- Canvas API
+- Responsive Web Design
+- CSS animations and transitions
+
+### Back End
+
+- PHP 8+
+- MySQL
+- PDO
+- Prepared SQL statements
+- JSON responses for asynchronous form submission
+
+### Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+- Browser Developer Tools
+- phpMyAdmin
+
+##  Featured Projects
 
 ### Store Application
 
-A practical application for managing products, stock, prices, sales records, and customer billing. It demonstrates CRUD operations, structured data handling, and software-design fundamentals.
+A store-management application designed to organize products, stock, sales, and customer billing.
+
+**Main features:**
+
+- Product entry and management
+- Inventory updates
+- Price calculations
+- Customer billing
+- Sales records
+- CRUD operations
 
 ### Restaurant Order Management System
 
-An academic application for menu management, order placement, bill calculation, and order-status tracking. It was developed to organize restaurant workflows and reduce manual work.
+An academic software application created to improve restaurant order processing and reduce manual work.
 
-## Project structure
+**Main features:**
+
+- Menu-item management
+- Customer order placement
+- Automatic bill calculation
+- Order-status tracking
+- Structured order-processing logic
+
+##  Project Structure
 
 ```text
 portfolio/
+│
 ├── index.html
 ├── style.css
 ├── script.js
 ├── save-response.php
-├── config.example.php 
+├── config.example.php
 ├── database.sql
-├── .gitignore
 ├── README.md
+├── .gitignore
+│
 └── assets/
     ├── Thakur-Payal-Resume.pdf
     └── favicon.svg
 ```
 
-## Contact-form database
+| File | Purpose |
+|---|---|
+| `index.html` | Website structure and portfolio content |
+| `style.css` | Layout, responsiveness, and visual effects |
+| `script.js` | Navigation, starfield, orbit animations, and form submission |
+| `save-response.php` | Validates and stores contact messages |
+| `config.example.php` | Example database configuration |
+| `database.sql` | SQL structure for the messages table |
+| `.gitignore` | Protects private configuration files |
+| `assets/` | Resume, favicon, and static assets |
 
-Valid submissions are inserted into the `portfolio_messages` table with:
+##  Local Setup
 
-- Visitor name
-- Email address
-- Subject
-- Message
-- UTC submission time
-- Hashed IP value for rate limiting
-- Browser user-agent information
-- Form version
+The visual website can be opened directly, but the contact form requires a PHP server and MySQL database.
 
-The endpoint includes:
+### Requirements
 
-- POST-only requests
-- Server-side validation
-- PDO prepared statements
-- Honeypot spam protection
-- Browser cooldown
-- Per-IP hourly rate limiting
-- Private database configuration
-- Generic public error messages
-- Automatic table creation
+- PHP 8 or newer
+- MySQL 5.7+ or MySQL 8+
+- PDO MySQL extension
+- A modern web browser
 
-## Run locally
+### 1. Clone the Repository
 
-The visual website can be opened directly, but PHP and MySQL require a server.
+```bash
+git clone https://github.com/thakurPayal070/portfolio.git
+cd portfolio
+```
 
-### XAMPP
+### 2. Create the Private Configuration
 
-1. Place the folder inside `C:\xampp\htdocs\`.
-2. Start Apache and MySQL.
-3. Create a MySQL database.
-4. Update `config.php` for the local database.
-5. Open the website through `http://localhost/...`.
+Copy:
 
-### PHP built-in server
+```text
+config.example.php
+```
+
+Rename the copy to:
+
+```text
+config.php
+```
+
+Update the database values:
+
+```php
+'database' => [
+    'host' => 'YOUR_DATABASE_HOST',
+    'port' => 3306,
+    'name' => 'YOUR_DATABASE_NAME',
+    'username' => 'YOUR_DATABASE_USERNAME',
+    'password' => 'YOUR_DATABASE_PASSWORD',
+    'charset' => 'utf8mb4',
+],
+```
+
+Replace the security key with a long random value:
+
+```php
+'ip_hash_key' => 'YOUR_LONG_RANDOM_SECRET',
+```
+
+> Never commit `config.php` to a public repository.
+
+### 3. Create the Database Table
+
+Import `database.sql` using phpMyAdmin or MySQL:
+
+```bash
+mysql -u YOUR_USERNAME -p YOUR_DATABASE_NAME < database.sql
+```
+
+The contact endpoint may also create the required table automatically if the database user has permission to create tables.
+
+### 4. Start the PHP Server
+
+Run this command inside the project folder:
 
 ```bash
 php -S localhost:8000
 ```
 
-A MySQL server must still be available and configured in `config.php`.
-
-## Host it online
-
-The recommended free setup for this project is **InfinityFree with MySQL** because the website requires PHP. GitHub Pages only serves the static part and cannot execute `save-response.php`.
-
-Follow the complete guide in [DEPLOYMENT.md](DEPLOYMENT.md).
-
-Deployment summary:
-
-1. Create an InfinityFree hosting account.
-2. Create a MySQL database in its control panel.
-3. Enter the database credentials in `config.php`.
-4. Upload the project contents into the lowercase `htdocs` folder.
-5. Submit a test message.
-6. Read saved messages from phpMyAdmin → `portfolio_messages`.
-
-## GitHub repository
-
-Repository:
+Open:
 
 ```text
-https://github.com/thakurPayal070/my-first-internship
+http://localhost:8000
 ```
 
-Update the repository:
+## 📬 Contact Form
 
-```bash
-git add .
-git commit -m "Add online MySQL contact form"
-git branch -M main
-git remote set-url origin https://github.com/thakurPayal070/my-first-internship.git
-git push -u origin main
+The contact form sends visitor messages to:
+
+```text
+save-response.php
 ```
 
-`config.php` is excluded by `.gitignore`. Never publish a real database password in GitHub.
+JavaScript submits the form asynchronously, so the page does not reload.
 
-## Contact
+Saved records include:
+
+- Public response ID
+- Name
+- Email
+- Subject
+- Message
+- Submission date and time
+- Hashed IP information
+- User-agent information
+- Form version
+
+### Protection Included
+
+- POST-only submissions
+- Required-field validation
+- Email validation
+- Maximum field lengths
+- Prepared database queries
+- Honeypot bot protection
+- Browser cooldown
+- Submission rate limiting
+- Hashed IP storage
+
+##  Security Notes
+
+- Keep `config.php` private.
+- Never publish database credentials.
+- Use a unique database password.
+- Replace the default hashing key.
+- Use HTTPS on the deployed website.
+- Limit database permissions where possible.
+- Do not commit message exports to GitHub.
+
+Recommended `.gitignore` entries:
+
+```gitignore
+config.php
+.env
+data/contact-responses.jsonl
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+```
+
+##  Deployment Requirements
+
+The complete website requires a server with:
+
+- PHP 8+
+- MySQL
+- PDO MySQL
+- HTTPS
+- PHP file execution
+- Database access
+
+Upload these runtime files:
+
+```text
+index.html
+style.css
+script.js
+save-response.php
+config.php
+assets/
+```
+
+After deployment:
+
+1. Open the website.
+2. Navigate to Contact.
+3. Submit a test message.
+4. Confirm that a success message appears.
+5. Check the `portfolio_messages` table.
+
+##  Navigation
+
+Visitors can move through the portfolio using:
+
+- Mouse wheel or trackpad
+- Navigation links
+- Arrow Up and Arrow Down
+- Page Up and Page Down
+- Home and End keys
+- Mouse movement for foreground effects
+
+##  Responsive Design
+
+The portfolio is optimized for:
+
+- Desktop computers
+- Laptops
+- Tablets
+- Mobile phones
+
+##  Customization
+
+### Change Portfolio Content
+
+Edit:
+
+```text
+index.html
+```
+
+### Change Design
+
+Edit:
+
+```text
+style.css
+```
+
+### Change Star Density
+
+Inside `script.js`:
+
+```javascript
+const STAR_COUNT_DESKTOP = 760;
+const STAR_COUNT_MOBILE = 390;
+```
+
+### Change Orbit Movement
+
+Edit the orbit profiles:
+
+```javascript
+{
+  radiusX: 0.425,
+  radiusY: 0.305,
+  duration: 30000,
+  direction: 1,
+  bob: 4.5
+}
+```
+
+- `radiusX` controls orbit width.
+- `radiusY` controls orbit height.
+- `duration` controls speed.
+- `direction` controls movement direction.
+- `bob` controls vertical floating distance.
+
+##  Future Improvements
+
+- Project screenshots
+- Live links for individual projects
+- GitHub links for each project
+- Admin dashboard for reviewing messages
+- Email notifications
+- Message filtering
+- More space objects and animations
+- Project filtering by technology
+- Additional accessibility controls
+
+##  Contact
 
 **Thakur Payal**
 
-- Email: [tp4997181@gmail.com](mailto:tp4997181@gmail.com)
-- LinkedIn: [thakurpayal](https://www.linkedin.com/in/thakurpayal/)
-- GitHub: [@thakurPayal070](https://github.com/thakurPayal070)
-- Location: Doiwala, Dehradun, Uttarakhand, India
+- **Email:** [tp4997181@gmail.com](mailto:tp4997181@gmail.com)
+- **LinkedIn:** [Thakur Payal](https://www.linkedin.com/in/thakurpayal/)
+- **GitHub:** [@thakurPayal070](https://github.com/thakurPayal070)
+- **Location:** Doiwala, Dehradun, Uttarakhand, India
 
-## License
+##  License
 
-Created for personal portfolio and educational use. Please do not republish an unchanged copy using the same identity or personal information.
+This project is intended for personal portfolio and educational use.
+
+You may study and adapt the code for learning purposes. Replace the personal details, resume, and project content before publishing your own version.
 
 ---
 
@@ -165,6 +394,8 @@ Created for personal portfolio and educational use. Please do not republish an u
 
 ### Designed and developed by Thakur Payal
 
-**Exploring ideas, building solutions, and growing one project at a time.**
+**Building creative interfaces and practical software solutions.**
+
+ Consider starring the repository if you find the project helpful.
 
 </div>
